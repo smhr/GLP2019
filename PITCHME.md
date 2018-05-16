@@ -40,3 +40,20 @@ Note that two files now appear to exist. However, a closer inspection of the fil
 $ ls -li file1 file2
 ```
 The `-i` option to ls prints out in the first column the **inode** number, which is a unique quantity for each file object. This field is the same for both of these files.
+
+---
+### Symbolic Links
+
+Symbolic (or Soft) links are created with the `-s` option as in:
+
+```bash
+$ ln -s file1 file4
+$ ls -li file1 file4
+```
+---
+
+Symbolic links take no extra space on the filesystem (unless their names are very long). They are extremely convenient as they can easily be modified to point to different places. An easy way to create a shortcut from your home directory to long pathnames is to create a symbolic link.
+
+---
+
+Unlike hard links, soft links can point to objects even on different filesystems (or partitions) which may or may not be currently available or even exist. In the case where the link does not point to a currently available or existing object, you obtain a **dangling** link.
