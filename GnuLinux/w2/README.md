@@ -11,7 +11,7 @@ In *nb-star* the column *k13* shows the number of neutron stars in each time sna
 Please extract *fort.83.xz*:
 
 ```bash
-tar -zxvf fort.83.xz
+tar -Jxvf fort.83.xz
 ```
 In file *fort.83* , "## BEGIN" and "## END" determine one time snapshot and each line between them shows some information about one star in that snapshot.
 
